@@ -1,43 +1,44 @@
 <?php
 /**
- * EbookSale Class
+ * EbookSale osztály
  *
- * This class handles the core functionality of the EbookSale plugin,
- * including the registration of custom post types and other essential features.
+ * Ez az osztály kezeli az EbookSale plugin alapfunkcióit,
+ * beleértve a custom post típus regisztrációját és egyéb lényeges feladatokat.
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit; // Exit if accessed directly.
+    exit; // Közvetlen hozzáférés esetén kilépés.
 }
 
 class EbookSale {
 
     public function __construct() {
-        // Initialize the plugin
-        $this->init();
+        // A plugin inicializálása az init hook segítségével,
+        // biztosítva, hogy a WP rewrite rendszere már elérhető legyen.
+        add_action( 'init', array( $this, 'init' ) );
     }
 
-    private function init() {
-        // Load custom post type
+    public function init() {
+        // Custom post típus regisztrációja
         $this->register_custom_post_type();
 
-        // Other initialization tasks can be added here
+        // További inicializációs feladatok itt adhatók hozzá.
     }
 
     private function register_custom_post_type() {
-        // Register the eBook custom post type
+        // eBook custom post típus regisztrációja
         $args = array(
-            'public' => true,
-            'label'  => 'eBooks',
-            'supports' => array( 'title', 'editor', 'thumbnail' ),
+            'public'      => true,
+            'label'       => 'eBooks',
+            'supports'    => array( 'title', 'editor', 'thumbnail' ),
             'has_archive' => true,
-            'rewrite' => array( 'slug' => 'ebooks' ),
+            'rewrite'     => array( 'slug' => 'ebooks' ),
         );
 
         register_post_type( 'ebook', $args );
     }
 }
 
-// Initialize the EbookSale class
+// Az EbookSale osztály inicializálása
 new EbookSale();
 ?>

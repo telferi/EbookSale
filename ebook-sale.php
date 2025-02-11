@@ -3,7 +3,7 @@
  * Plugin Name: Ebook Sale
  * Description: A plugin for selling eBooks with Stripe payment integration.
  * Version: 1.0
- * Author: Your Name
+ * Author: Frank Smith
  * Text Domain: ebook-sale
  */
 
@@ -25,7 +25,11 @@ require_once EBOOK_SALE_DIR . 'public/class-ebooksale-public.php';
 // Initialize the plugin
 function run_ebook_sale() {
     $plugin = new EbookSale();
-    $plugin->run();
+    
+    if ( method_exists( $plugin, 'run' ) ) {
+        $plugin->run();
+    }
 }
+
 run_ebook_sale();
 ?>

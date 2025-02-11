@@ -1,0 +1,50 @@
+msgid "Ebook Sale"
+msgstr "Ebook Sale"
+
+msgid "Welcome to the Ebook Sale platform."
+msgstr "Welcome to the Ebook Sale platform."
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Register"
+msgstr "Register"
+
+msgid "Account"
+msgstr "Account"
+
+msgid "Purchase"
+msgstr "Purchase"
+
+msgid "Your eBooks"
+msgstr "Your eBooks"
+
+msgid "Manage your account settings."
+msgstr "Manage your account settings."
+
+msgid "Please enter your credentials."
+msgstr "Please enter your credentials."
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Confirm Password"
+msgstr "Confirm Password"
+
+msgid "Submit"
+msgstr "Submit"
+
+msgid "Thank you for your purchase!"
+msgstr "Thank you for your purchase!"
+
+msgid "Error: Please try again."
+msgstr "Error: Please try again."
+
+msgid "You must be logged in to access this page."
+msgstr "You must be logged in to access this page."
+
+msgid "Logout"
+msgstr "Logout"
